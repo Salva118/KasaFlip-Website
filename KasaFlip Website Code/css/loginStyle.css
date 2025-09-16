@@ -1,0 +1,221 @@
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    display: grid; 
+    padding: 45px 60px 0 0;
+    gap: 19px;
+    grid-template-columns: 22% 78%;
+    background: #000;
+    color: #f2f2f2;
+}
+
+
+/*-----------*/
+/*Box Styling*/
+/*-----------*/
+/*navbar*/
+nav { 
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  width: 22%;
+  height: 100vh;
+  z-index: 10;
+
+}
+
+    /*logo*/
+    nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    text-decoration: none;
+    color: inherit;
+    padding:  0;
+    transform: translateY(-9px);  
+    }
+
+    nav .logo img {
+    height: 90px; 
+    width: auto;
+    }
+
+    nav .logotext {
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    align-items: center; 
+    transform: translateX(-15px);
+    }
+    /*logo*/
+
+        /*Dashboard*/
+        nav .dashboard{
+        margin-left: 19px;
+        margin-top: 60px;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #747473
+        }
+
+        nav .dashboardtext{
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1;
+        }
+        /*Dashboard*/
+
+          /*Save*/
+          nav .save{
+          margin-left: 17px;
+          margin-top: 35px;
+          width: 100%;
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          text-decoration: none;
+          color: #747473
+          }
+
+          nav .savetext{
+          font-family: Arial, sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1;
+          }
+          /*Save*/
+
+            /*LogIn*/
+            nav .login{
+            margin-left: 6px;
+            margin-top: 400px;
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #747473;
+            padding-top: 18px;
+            position: relative;
+            }
+
+            nav .login::before{
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0px;
+            right: 30px;
+            height: 1px;
+            background: #2a2a2a;
+            opacity: .7;
+            }
+
+            nav .logintext  {
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1;
+            }    
+            /*LogIn*/
+/*navbar*/
+
+/* =========================
+   Login page (right column)
+   ========================= */
+.wrapper{
+  grid-column: 2;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  padding-top: 40px;
+}
+
+    /* Card */
+    .wrapper form{
+    width: clamp(320px, 60%, 460px);
+    background: #171717;
+    border-radius: 12px;
+    padding: 28px;
+    }
+
+    .wrapper h1{
+    margin: 0 0 16px;
+    font: 700 26px/1 Arial, sans-serif;
+    }
+    /* Card */
+
+        /*Input rows*/
+        .input.box{
+        position: relative;
+        margin-top: 14px;
+        }
+
+        .input.box input{
+        width: 100%;
+        height: 52px;
+        border-radius: 10px;
+        background: #0f0f0f;
+        color: #f2f2f2;
+        border: 1px solid #2a2a2a;
+        padding: 0 14px 0 44px;
+        appearance: none; -webkit-appearance: none;
+        outline: none; box-shadow: none;
+        }
+        .input.box input::placeholder{ color: #9a9a9a; }
+        .input.box input:focus{ border-color:#3a3a3a; box-shadow:0 0 0 2px #3a3a3a; }
+        /*Input rows*/
+
+            /* Icons inside inputs */
+            .input.box i{
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9a9a9a;
+            pointer-events: none;
+            font-size: 18px;
+            }
+            /* Icons inside inputs */
+
+                /* Remember / Forgot row */
+                .remember-forgot{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 12px;
+                font-size: 14px;
+                color: #b5b5b5;
+                }
+                .remember-forgot a{ color:#ffb04a; text-decoration:none; }
+                .remember-forgot a:hover{ text-decoration:underline; }
+                /* Remember / Forgot row */
+
+                    /*Submit button*/
+                    .btn{
+                    width: 100%;
+                    height: 52px;
+                    margin-top: 16px;
+                    border-radius: 10px;
+                    border: 1px solid #ff9a16;
+                    background: #ff9a16;
+                    color: #000;
+                    font: 800 18px/1 Arial, sans-serif;
+                    cursor: pointer;
+                    }
+                    .btn:hover{ filter: brightness(1.05); }
+                    /*Submit button*/
+
+                        /* Register link */
+                        .register-link{
+                        text-align: center;
+                        margin-top: 12px;
+                        font-size: 14px;
+                        color: #b5b5b5;
+                        }
+                        .register-link a{ color:#ffb04a; text-decoration:none; }
+                        .register-link a:hover{ text-decoration:underline; }
